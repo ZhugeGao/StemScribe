@@ -1,25 +1,22 @@
-# Dependencies
+
 node_modules/
 app/node_modules/
-
-# Build outputs
 app/build/
 dist/
 
-# Runtime data
+
 data/
 vector_store/
 
-# Environment variables
+
 .env
 
-# IDE files
-.vscode/
 .idea/
+.vscode/
 
-# Logs
+
 *.log
 npm-debug.log*
 
-# OS generated files
+
 .DS_Store
