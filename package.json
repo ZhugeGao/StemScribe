@@ -2,27 +2,31 @@
   "name": "stemscribe",
   "version": "1.0.0",
   "description": "STEM Educational Material Generator",
-  "main": "server/index.ts",
+  "type": "module",
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "nodemon --exec ts-node server/index.ts",
+    "server": "npx tsx watch server/index.ts",
     "client": "cd app && npm start",
     "build": "cd app && npm run build",
     "test": "cd app && npm test",
-    "install-all": "npm install && cd app && npm install"
+    "install-all": "npm install && cd app && npm install",
+    "clean": "rm -rf node_modules app/node_modules vector_store",
+    "reinstall": "npm run clean && npm run install-all"
   },
   "dependencies": {
-    "axios": "^0.21.1",
+    "@langchain/community": "^0.3.16",
+    "@langchain/ollama": "^0.1.2",
+    "compromise": "^14.14.3",
     "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1"
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "syllable": "^5.0.1",
+    "tsx": "^4.7.1"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.12",
-    "@types/express": "^4.17.13",
-    "concurrently": "^6.2.0",
-    "nodemon": "^2.0.7",
-    "ts-node": "^10.0.0",
-    "typescript": "^4.3.5"
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3"
   }
 }

@@ -1,0 +1,8 @@
+{
+  "ignore": [
+    "vector_store/*",
+    "data/*",
+    "*.json"
+  ],
+  "delay": 2500
+} 
